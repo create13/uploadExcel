@@ -1,10 +1,14 @@
 <template>
-    <div class="upload-file">
-        <input @change="uploadFile" multiple="multiple" ref="file" type="file" class="input-opacity" />
-        上传表格
+    <div>
+        <div class="back-home" @click="backHome">回到首页</div>
+        <div class="des-title">pdp页面数据处理</div>
+        <div class="upload-file">
+            <input @change="uploadPdpFile" multiple="multiple" ref="file" type="file" class="input-opacity" />
+            上传表格
+        </div>
+        <div @click="downLoadPdpFile" class="download-file">下载文件</div>
+        <div class="prompt-fonts">{{uploadSuccess}}</div>
     </div>
-    <div @click="downLoadFile" class="download-file">下载文件</div>
-    <div class="prompt-fonts">{{uploadSuccess}}</div>
 </template>
 
 <script>
@@ -17,11 +21,11 @@ export default {
             uploadSuccess: ''
         };
     },
-    components: {
-    },
-    mounted () {},
-    methods: {
-        uploadFile () {
+  components: {},
+  mounted () {},
+  methods: {
+        uploadPdpFile () {
+            this.uploadSuccess = '';
             const file = this.$refs.file.files[0];
             let readBinary;
             let reader = new FileReader();
@@ -31,7 +35,7 @@ export default {
                 readBinary = await XLSX.read(resultData, {
                     type: 'binary'
                 });
-                axios.post('/api/uploadFile', {readBinary}).then(res => {
+                axios.post('/api/uploadPdpFile', {readBinary}).then(res => {
                     console.log('res', res.data.message);
                     this.uploadSuccess = res.data.message;
                 }).catch(err => {
@@ -39,14 +43,19 @@ export default {
                 })
             }
         },
-        downLoadFile () {
-            window.open('http://192.168.211.125:3000/downLoadAll', '_blank');   
+        downLoadPdpFile () {
+            window.open('http://192.168.211.125:3000/downLoadPdpAll', '_blank');   
+        },
+         backHome () {
+            this.$router.push('/');
         }
-    }
+  }
 }
 </script>
 
 <style scoped>
+    .back-home {padding: 10px 0; cursor: pointer;text-decoration: underline;color: dodgerblue;}
+    .des-title {padding: 20px 0;}
     .upload-file {
         width: 150px;
         height: 36px;

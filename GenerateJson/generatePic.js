@@ -10,12 +10,12 @@ const generatePic = async function(workData) {
     let generateJson = xlsx.utils.sheet_to_json(sheet);
     let restructuringArray = []; // 数据重组
     let recordSpu;
-    removeDirContent('exportData');
+    removeDirContent('exportData/lddJson/');
     for (let [key, line] of generateJson.entries()) {
         if (line.spu) {
             if (restructuringArray.length != 0) {
                 singleData = {"pdpJson": [...restructuringArray]};
-                fs.writeFileSync(`${__dirname}/exportData/${recordSpu}.txt`, JSON.stringify(singleData))
+                fs.writeFileSync(`${__dirname}/exportData/lddJson/${recordSpu}.txt`, JSON.stringify(singleData))
                 restructuringArray = [];
                 recordSpu = line.spu;
             } else {
@@ -149,13 +149,13 @@ const generatePic = async function(workData) {
         if (filterData.length == 1) {
             if (key == generateJson.length - 1) {
                 singleData = {"pdpJson": [...restructuringArray]};
-                fs.writeFileSync(`${__dirname}/exportData/${recordSpu}.txt`, JSON.stringify(singleData))
+                fs.writeFileSync(`${__dirname}/exportData/lddJson/${recordSpu}.txt`, JSON.stringify(singleData))
                 restructuringArray = [];
             }
         } else if (filterData.length > 1) {
             if (key == generateJson.length - 1 && line.spu) {
                 singleData = {"pdpJson": [...restructuringArray]};
-                fs.writeFileSync(`${__dirname}/exportData/${line.spu}.txt`, JSON.stringify(singleData))
+                fs.writeFileSync(`${__dirname}/exportData/lddJson/${line.spu}.txt`, JSON.stringify(singleData))
                 restructuringArray = [];
             }
         }

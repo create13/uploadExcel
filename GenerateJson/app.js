@@ -12,23 +12,29 @@ app.use(router.routes()).use(router.allowedMethods());
 router.get('/', async ctx => {
     ctx.body = 'hello yours!';
 })
-router.post('/uploadFile', koaBody(), async ctx => {
-    console.log('readBinary', ctx.request.body.readBinary);
-    await generatePic(ctx.request.body.readBinary); 
+router.post('/uploadPdpFile', koaBody(), async ctx => {
+    await generatePic(ctx.request.body.readBinary);
+    const fileName = `${process.cwd()}/exportData/lddJson/jsonFile.zip`;
+    const zipStream = fs.createWriteStream(fileName);
+    const zip = archiver('zip');
+    zip.pipe(zipStream);
+    zip.directory(`${__dirname}/exportData/lddJson`);
+    zip.finalize();
     ctx.body = {
         status: 200,
         message: '上传成功'
     }
 })
-router.get('/downLoadAll', async ctx => {
-    const fileName = 'jsonFile.zip';
-    const zipStream = fs.createWriteStream(fileName);
-    const zip = archiver('zip');
-    zip.pipe(zipStream);
-    zip.directory(`${__dirname}/exportData/`);
-    zip.finalize();
-    ctx.set("Content-Disposition", "attachment; filename="+fileName);
+router.get('/downLoadPdpAll', async ctx => {
+    ctx.set("Content-Disposition", `attachment; filename=jsonFile.zip`);
     ctx.set('Content-type', 'application/vnd.openxmlformats');
-    ctx.body = await fs.readFileSync(fileName);
+    ctx.body = await fs.readFileSync(`${process.cwd()}/exportData/lddJson/jsonFile.zip`);
+})
+router.post('/uploadLddFile', koaBody(), async ctx => {
+    await generatePic(ctx.request.body.readBinary); 
+    ctx.body = {
+        status: 200,
+        message: '上传成功'
+    }
 })
 app.listen(3000, () => {console.log('server started...');});
