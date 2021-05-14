@@ -31,6 +31,7 @@ router.get('/downLoadPdpAll', async ctx => {
     ctx.body = await fs.readFileSync(`${process.cwd()}/exportData/lddJson/jsonFile.zip`);
 })
 router.post('/uploadLddFile', koaBody(), async ctx => {
+    console.log('readBinary',ctx.request.body.readBinary);
     await generatePic(ctx.request.body.readBinary); 
     ctx.body = {
         status: 200,

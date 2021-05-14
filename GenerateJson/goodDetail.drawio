@@ -1,0 +1,133 @@
+<mxfile>
+    <diagram id="XUtiPge7Gyq3etnk5qUO" name="第 1 页">
+        <mxGraphModel dx="1096" dy="483" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="35" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="210" y="454" width="958" height="421" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="&lt;div style=&quot;background-color: rgb(46 , 46 , 46) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; line-height: 24px&quot;&gt;&lt;font color=&quot;#fa8072&quot;&gt;读取magento后台配置的&lt;/font&gt;&lt;span style=&quot;color: rgb(192 , 192 , 192) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace&quot;&gt;pdp_auto_json&lt;/span&gt;&lt;span style=&quot;color: rgb(250 , 128 , 114)&quot;&gt;数据&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="35">
+                    <mxGeometry x="688" y="255.5" width="270" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="" style="group" vertex="1" connectable="0" parent="35">
+                    <mxGeometry x="-8" y="1" width="719" height="421" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="34" source="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="178" y="150" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="34" source="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="258" y="80" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="是" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="34">
+                    <mxGeometry x="138" y="40" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="存在pdp_auto_json字段" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="34">
+                    <mxGeometry x="178" width="142" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="否" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="34">
+                    <mxGeometry x="218" y="60" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="&lt;div style=&quot;color: rgb(220 , 220 , 220) ; background-color: rgb(46 , 46 , 46) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; line-height: 24px&quot;&gt;&lt;span style=&quot;color: #fa8072&quot;&gt;展示&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace&quot;&gt;new_product_description或&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace&quot;&gt;product_description&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="34">
+                    <mxGeometry x="258" y="50" width="360" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="34" source="16">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="180" y="240" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="&lt;div style=&quot;background-color: rgb(46 , 46 , 46) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; line-height: 24px&quot;&gt;&lt;font color=&quot;#fa8072&quot;&gt;是否是&lt;/font&gt;&lt;span style=&quot;color: rgb(250 , 128 , 114) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace&quot;&gt;Y0812001或&lt;/span&gt;&lt;span style=&quot;color: rgb(250 , 128 , 114) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace&quot;&gt;Y0821001或&lt;/span&gt;&lt;span style=&quot;color: rgb(250 , 128 , 114) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace&quot;&gt;Y0821002&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="34">
+                    <mxGeometry y="150" width="360" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="34" source="19">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="180" y="360" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="34" source="19">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="268" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="是" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="34">
+                    <mxGeometry x="140" y="240" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="否" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="34">
+                    <mxGeometry x="220" y="260" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="&lt;div style=&quot;background-color: rgb(46 , 46 , 46) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; line-height: 24px&quot;&gt;&lt;font color=&quot;#fa8072&quot;&gt;商品详情展示前端本地定义好的&lt;/font&gt;&lt;span style=&quot;color: rgb(250 , 128 , 114) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace&quot;&gt;particularsDIY字段数据&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="34">
+                    <mxGeometry x="2" y="361" width="360" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="34" source="25">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="568" y="280.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" value="&lt;div style=&quot;background-color: rgb(46 , 46 , 46) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; line-height: 24px&quot;&gt;&lt;font color=&quot;#fa8072&quot;&gt;是否是&lt;/font&gt;&lt;span style=&quot;color: rgb(250 , 128 , 114) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace&quot;&gt;Y0172111或&lt;/span&gt;&lt;span style=&quot;color: rgb(250 , 128 , 114) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace&quot;&gt;Y0996139&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="34">
+                    <mxGeometry x="268" y="253" width="260" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="34" source="27">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="608" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="34" source="27">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="688" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" value="是" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="34">
+                    <mxGeometry x="568" y="240" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="&lt;div style=&quot;background-color: rgb(46 , 46 , 46) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; line-height: 24px&quot;&gt;&lt;font color=&quot;#fa8072&quot;&gt;完全读取前端本地写死数据&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="34">
+                    <mxGeometry x="499" y="350" width="220" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="否" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="34">
+                    <mxGeometry x="648" y="253" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="200" y="150" width="900" height="452" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="pdp商品详情展示逻辑优先级" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="64">
+                    <mxGeometry x="90" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="endArrow=classic;html=1;" edge="1" parent="64">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="179.5" y="60" as="sourcePoint"/>
+                        <mxPoint x="179.5" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="64" source="4">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="180" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="&lt;div style=&quot;color: rgb(220 , 220 , 220) ; background-color: rgb(46 , 46 , 46) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; line-height: 24px&quot;&gt;&lt;span style=&quot;color: #fa8072&quot;&gt;存在product_description或&lt;/span&gt;&lt;span style=&quot;color: rgb(250 , 128 , 114) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace&quot;&gt;new_product_description字段&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="64">
+                    <mxGeometry y="121" width="360" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="64">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="50" y="452" as="targetPoint"/>
+                        <mxPoint x="140" y="272" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="36" value="是" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="64">
+                    <mxGeometry x="140" y="230" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="否" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="64">
+                    <mxGeometry x="80" y="246" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="注意：如果本地Ycode.js中配置&lt;span style=&quot;color: rgb(250 , 128 , 114) ; background-color: rgb(46 , 46 , 46) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace&quot;&gt;particularsDIY字段 Ycode对应的index.js中也存在用接口中请求到的&lt;/span&gt;&lt;span style=&quot;color: rgb(192 , 192 , 192) ; background-color: rgb(46 , 46 , 46) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace&quot;&gt;pdp_auto_json数据赋值给本地 那么会出现&lt;/span&gt;&lt;span style=&quot;color: rgb(250 , 128 , 114) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; background-color: rgb(46 , 46 , 46)&quot;&gt;particularsDIY和&lt;/span&gt;&lt;span style=&quot;color: rgb(192 , 192 , 192) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; background-color: rgb(46 , 46 , 46)&quot;&gt;pdp_auto_json同时展示在详情中 顺序&lt;/span&gt;&lt;span style=&quot;color: rgb(250 , 128 , 114) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; background-color: rgb(46 , 46 , 46)&quot;&gt;particularsDIY在先&lt;/span&gt;&lt;span style=&quot;color: rgb(192 , 192 , 192) ; font-family: &amp;#34;consolas&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; background-color: rgb(46 , 46 , 46)&quot;&gt;pdp_auto_json在后 暂时本地没有这种配置。&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="64">
+                    <mxGeometry x="380" width="520" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="36" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

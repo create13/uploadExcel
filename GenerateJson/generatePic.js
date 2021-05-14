@@ -11,7 +11,9 @@ const generatePic = async function(workData) {
     let restructuringArray = []; // 数据重组
     let recordSpu;
     removeDirContent('exportData/lddJson/');
+    console.log('generateJson', generateJson);
     for (let [key, line] of generateJson.entries()) {
+        console.log('line', line);
         if (line.spu) {
             if (restructuringArray.length != 0) {
                 singleData = {"pdpJson": [...restructuringArray]};
@@ -146,6 +148,7 @@ const generatePic = async function(workData) {
         let filterData = generateJson.filter(item => {
             return item.spu;
         })
+        console.log('filterData', filterData);
         if (filterData.length == 1) {
             if (key == generateJson.length - 1) {
                 singleData = {"pdpJson": [...restructuringArray]};
@@ -153,9 +156,9 @@ const generatePic = async function(workData) {
                 restructuringArray = [];
             }
         } else if (filterData.length > 1) {
-            if (key == generateJson.length - 1 && line.spu) {
+            if (key == generateJson.length - 1 && recordSpu) {
                 singleData = {"pdpJson": [...restructuringArray]};
-                fs.writeFileSync(`${__dirname}/exportData/lddJson/${line.spu}.txt`, JSON.stringify(singleData))
+                fs.writeFileSync(`${__dirname}/exportData/lddJson/${recordSpu}.txt`, JSON.stringify(singleData))
                 restructuringArray = [];
             }
         }

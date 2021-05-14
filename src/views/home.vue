@@ -26,7 +26,6 @@ export default {
   }
 }
 </script>
-
 <style scoped>
     .des-title {padding: 20px 0;}
     .top-distance {margin-top: 20px;}
