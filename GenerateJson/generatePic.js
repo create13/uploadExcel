@@ -11,7 +11,7 @@ const generatePic = async function(workData) {
     let restructuringArray = []; // 数据重组
     let recordSpu;
     removeDirContent('exportData/lddJson/');
-    console.log('generateJson', generateJson);
+    // console.log('generateJson', generateJson);
     for (let [key, line] of generateJson.entries()) {
         console.log('line', line);
         if (line.spu) {
@@ -145,10 +145,35 @@ const generatePic = async function(workData) {
             obj.data['poster'] = line.poster;
             restructuringArray.push(obj);
         }
+        if (line.imageSwiper) {
+            let obj = {};
+            obj.dom = "imageSwiper";
+            let getWidth = line.style && line.style.substring(0, line.style.indexOf('&#'));
+            let getHeight = line.style && line.style.substring(line.style.indexOf('&#') + 2);
+            obj.style = `width: ${getWidth}rpx; height: ${getHeight}rpx;`
+            if (line.imageSwiper == 'need') {
+                obj.dots = true;
+            } else {
+                obj.dots = false;
+            }
+            let dataArr = line.src.split('&#');
+            let contentData = [];
+            dataArr.forEach(res => {
+                let saveObj = {};
+                saveObj.src = res;
+                saveObj.imageStyle = {
+                    width: `${line.imageWidth}rpx;`,
+                    height: `${line.imageHeight}rpx;`
+                }
+                contentData.push(saveObj);
+            })
+            obj.data = Array.from(contentData);
+            restructuringArray.push(obj);
+            
+        }
         let filterData = generateJson.filter(item => {
             return item.spu;
         })
-        console.log('filterData', filterData);
         if (filterData.length == 1) {
             if (key == generateJson.length - 1) {
                 singleData = {"pdpJson": [...restructuringArray]};
