@@ -139,10 +139,16 @@ const generatePic = async function(workData) {
         if (line.video) {
             let obj = {};
             obj.dom = "video";
-            obj.style = "";
             obj.data = {};
             obj.data['src'] = line.video;
             obj.data['poster'] = line.poster;
+            if (line.videoWidth && line.videoHeight) {
+                obj.style = `width:${line.videoWidth}rpx;height:${line.videoHeight}rpx;`;
+                obj.videoStyle = `width:${line.videoWidth}rpx;height:${line.videoHeight}rpx;`;
+            } else {
+                obj.style = "";
+            }
+
             restructuringArray.push(obj);
         }
         if (line.imageSwiper) {
