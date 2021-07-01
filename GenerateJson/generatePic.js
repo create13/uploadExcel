@@ -151,7 +151,7 @@ const generatePic = async function(workData) {
 
             restructuringArray.push(obj);
         }
-        if (line.imageSwiper) {
+        if (line.imageSwiper && line.src) {
             let obj = {};
             obj.dom = "imageSwiper";
             let getWidth = line.style && line.style.substring(0, line.style.indexOf('&#'));
@@ -162,9 +162,9 @@ const generatePic = async function(workData) {
             } else {
                 obj.dots = false;
             }
-            let dataArr = line.src.split('&#');
+            let dataArr = line.src && line.src.split('&#');
             let contentData = [];
-            dataArr.forEach(res => {
+            dataArr && dataArr.forEach(res => {
                 let saveObj = {};
                 saveObj.src = res;
                 saveObj.imageStyle = {

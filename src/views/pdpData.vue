@@ -44,7 +44,7 @@ export default {
             }
         },
         downLoadPdpFile () {
-            window.open('http://192.168.211.125:3000/downLoadPdpAll', '_blank');   
+            window.open('http://192.168.210.238:3000/downLoadPdpAll', '_blank');   
         },
          backHome () {
             this.$router.push('/');

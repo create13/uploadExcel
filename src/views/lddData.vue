@@ -43,7 +43,7 @@ export default {
             }
         },
         downLoadLddFile () {
-            window.open('http://192.168.211.125:3000/downLoadLddAll', '_blank');   
+            window.open('http://192.168.210.238:3000/downLoadLddAll', '_blank');   
         },
         backHome () {
             this.$router.push('/');
