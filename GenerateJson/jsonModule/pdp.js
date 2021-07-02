@@ -4,20 +4,20 @@ const xlsx = require('xlsx');
 const fs = require('fs');
 let singleData = {};
 // 处理表格数据逻辑
-const generatePic = async function(workData) {
+const generatePic = async function(workData, dirPath) {
     let sheetName = workData.SheetNames;
     let sheet = workData.Sheets[sheetName[0]]
     let generateJson = xlsx.utils.sheet_to_json(sheet);
     let restructuringArray = []; // 数据重组
     let recordSpu;
-    removeDirContent('exportData/lddJson/');
+    await removeDirContent(dirPath);
     // console.log('generateJson', generateJson);
     for (let [key, line] of generateJson.entries()) {
         console.log('line', line);
         if (line.spu) {
             if (restructuringArray.length != 0) {
                 singleData = {"pdpJson": [...restructuringArray]};
-                fs.writeFileSync(`${__dirname}/exportData/lddJson/${recordSpu}.txt`, JSON.stringify(singleData))
+                fs.writeFileSync(`${dirPath}/${recordSpu}.txt`, JSON.stringify(singleData))
                 restructuringArray = [];
                 recordSpu = line.spu;
             } else {
@@ -183,13 +183,13 @@ const generatePic = async function(workData) {
         if (filterData.length == 1) {
             if (key == generateJson.length - 1) {
                 singleData = {"pdpJson": [...restructuringArray]};
-                fs.writeFileSync(`${__dirname}/exportData/lddJson/${recordSpu}.txt`, JSON.stringify(singleData))
+                fs.writeFileSync(`${dirPath}/${recordSpu}.txt`, JSON.stringify(singleData))
                 restructuringArray = [];
             }
         } else if (filterData.length > 1) {
             if (key == generateJson.length - 1 && recordSpu) {
                 singleData = {"pdpJson": [...restructuringArray]};
-                fs.writeFileSync(`${__dirname}/exportData/lddJson/${recordSpu}.txt`, JSON.stringify(singleData))
+                fs.writeFileSync(`${dirPath}/${recordSpu}.txt`, JSON.stringify(singleData))
                 restructuringArray = [];
             }
         }
@@ -197,15 +197,17 @@ const generatePic = async function(workData) {
 }
 // 删除指定文件夹下的内容
 const removeDirContent = function (path) {
+    console.log('path', path);
     let files = fs.readdirSync(path); // 读取文件夹下面的文件内容
-    files.forEach(item => {
-        let currentPath = `${path}/${item}`;
-        if (fs.statSync(currentPath).isDirectory()) { // 如果该文件夹下有文件夹 返回true 执行递归操作 没有文件夹 返回false 删除文件夹下文件
-            removeDirContent(currentPath);
-        } else {
-            fs.unlinkSync(currentPath); // 删除该文件
-        }
-    })
+    console.log('files', files);
+    // files && files.forEach(item => {
+    //     let currentPath = `${path}/${item}`;
+    //     if (fs.statSync(currentPath).isDirectory()) { // 如果该文件夹下有文件夹 返回true 执行递归操作 没有文件夹 返回false 删除文件夹下文件
+    //         removeDirContent(currentPath);
+    //     } else {
+    //         fs.unlinkSync(currentPath); // 删除该文件
+    //     }
+    // })
 
 }
 
