@@ -11,9 +11,7 @@ const generatePic = async function(workData, dirPath) {
     let restructuringArray = []; // 数据重组
     let recordSpu;
     await removeDirContent(dirPath);
-    // console.log('generateJson', generateJson);
     for (let [key, line] of generateJson.entries()) {
-        console.log('line', line);
         if (line.spu) {
             if (restructuringArray.length != 0) {
                 singleData = {"pdpJson": [...restructuringArray]};

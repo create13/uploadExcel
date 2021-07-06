@@ -3,7 +3,8 @@ const app = new Koa();
 const json = require('koa-json');
 const koaRouter = require('koa-router');
 const router = new koaRouter();
-const generatePic = require('./jsonModule/pdp.js');
+const generatePdp = require('./jsonModule/pdp.js');
+const generateLdd = require('./jsonModule/ldd.js');
 const koaBody = require('koa-body');
 const archiver = require('archiver');
 const fs = require('fs');
@@ -14,7 +15,7 @@ router.get('/', async ctx => {
     ctx.body = 'hello yours!';
 })
 router.post('/uploadPdpFile', koaBody(), async ctx => {
-    await generatePic(ctx.request.body.readBinary, path.join(__dirname, '/exportData/pdpJson'));
+    await generatePdp(ctx.request.body.readBinary, path.join(__dirname, '/exportData/pdpJson'));
     const fileName = `${process.cwd()}/exportData/pdpJson/jsonFile.zip`;
     const zipStream = fs.createWriteStream(fileName);
     const zip = archiver('zip');
@@ -32,8 +33,7 @@ router.get('/downLoadPdpAll', async ctx => {
     ctx.body = await fs.readFileSync(`${process.cwd()}/exportData/pdpJson/jsonFile.zip`);
 })
 router.post('/uploadLddFile', koaBody(), async ctx => {
-    console.log('readBinary',ctx.request.body.readBinary);
-    await generatePic(ctx.request.body.readBinary); 
+    await generateLdd(ctx.request.body.readBinary, path.join(__dirname, '/exportData/lddJson'));
     ctx.body = {
         status: 200,
         message: '上传成功'
