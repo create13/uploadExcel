@@ -161,10 +161,14 @@ const generatePic = async function(workData, dirPath) {
                 obj.dots = false;
             }
             let dataArr = line.src && line.src.split('&#');
+            let linkArr = line.link && line.link.split('&#');
             let contentData = [];
-            dataArr && dataArr.forEach(res => {
+            dataArr && dataArr.forEach((res, rindex) => {
                 let saveObj = {};
                 saveObj.src = res;
+                if (linkArr.length > 0) {
+                    saveObj.link = linkArr[rindex];
+                }
                 saveObj.imageStyle = {
                     width: `${line.imageWidth}rpx;`,
                     height: `${line.imageHeight}rpx;`
