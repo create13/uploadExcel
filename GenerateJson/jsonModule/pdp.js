@@ -166,7 +166,7 @@ const generatePic = async function(workData, dirPath) {
             dataArr && dataArr.forEach((res, rindex) => {
                 let saveObj = {};
                 saveObj.src = res;
-                if (linkArr.length > 0) {
+                if (linkArr && linkArr.length > 0) {
                     saveObj.link = linkArr[rindex];
                 }
                 saveObj.imageStyle = {
